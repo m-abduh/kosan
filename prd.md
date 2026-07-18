@@ -1,714 +1,215 @@
-# PRD — SaaS Manajemen Kos "KosKu"
+# PRD - Aplikasi Kosan
 
-# 1. Visi Produk
+## Halaman Utama (Semua Role)
 
-KosKu adalah platform SaaS manajemen kos yang membantu pemilik kos mengelola operasional secara lebih rapi, otomatis, dan terpusat.
+### 1. Login / Register
+- Dual flow: Login/Register sebagai **Pencari Kos** atau **Pemilik Kos**
+- Field: email/no HP, password
+- Opsi: Google, Apple
 
-Tujuan utama produk ini bukan menggantikan seluruh proses bisnis kos, tetapi menghilangkan penggunaan buku catatan, Excel, dan chat WhatsApp yang berantakan.
+### 2. Homepage
+- Search bar (lokasi, kampus, landmark)
+- Banner promo bergulir
+- Rekomendasi kos terdekat / populer
+- Kategori cepat (Kos Putra/Putri/Campur, Apartemen)
+- CTA "Daftarkan Kos Anda" (untuk owner)
 
-Fokus utama:
+### 3. Notifikasi
+- Inbox notifikasi: chat baru, status booking, pengingat pembayaran, jadwal survei
+- Badge counter
 
-* mengurangi pekerjaan administratif,
-* meminimalkan keterlambatan pembayaran,
-* meningkatkan visibilitas bisnis kos,
-* mengotomatisasi proses operasional rutin.
+### 4. Pusat Bantuan
+- FAQ, panduan, kontak CS (WA, email)
+- Form laporan masalah
 
----
-
-# 2. Target Pengguna
-
-## Primary User
-
-* Pemilik kos 10–100 kamar
-* Pemilik beberapa properti kos
-* Pengelola kos profesional
-
-## Secondary User
-
-* Admin kos
-* Penjaga kos
-* Staff operasional
-
-## End User
-
-* Penghuni kos
+### 5. Blog / Info
+- Artikel tips, panduan cari kos, berita update
 
 ---
 
-# 3. Masalah yang Diselesaikan
+## Sisi Pencari Kos (Tenant)
 
-## Sebelum Menggunakan KosKu
+### 6. Hasil Pencarian
+- Tampilan **List** dan **Map**
+- Filter: lokasi, harga (range), fasilitas (AC, wifi, kamar mandi dlm, dll), tipe kos (putra/putri/campur), durasi sewa (bulanan/tahunan/harian), ketersediaan kamar, aturan kos (pasutri, hewan, dll)
+- Urutkan: populer, termurah, terdekat, terbaru
 
-* Tagihan dicatat manual.
-* Sulit mengetahui penghuni yang menunggak.
-* Sulit mengetahui kamar kosong.
-* Laporan pemasukan tidak jelas.
-* Komunikasi tersebar di WhatsApp.
-* Sulit melakukan rekap bulanan.
+### 7. Detail Kos
+- Galeri foto + **Virtual Tour 360°**
+- Info properti: tipe, fasilitas, aturan, deskripsi
+- Harga sewa per bulan/tahun
+- Ketersediaan kamar
+- Alamat lengkap + lokasi peta
+- **Review & Rating** dari penyewa sebelumnya
+- Tombol: **Chat**, **Ajukan Survei**, **Ajukan Sewa**, **Favorit**
 
-## Setelah Menggunakan KosKu
+### 8. Chat
+- Inbox chat real-time dengan pemilik kos
+- Kirim teks, file (foto, dokumen)
+- Notifikasi pesan baru
 
-* Tagihan dibuat otomatis.
-* Pengingat pembayaran berjalan otomatis.
-* Status kamar terlihat real-time.
-* Laporan tersedia otomatis.
-* Komunikasi penghuni lebih terorganisir.
-* Pemilik mengetahui kondisi bisnis hanya dalam beberapa detik.
+### 9. Ajukan Sewa (Booking)
+- Pilih kamar yang tersedia
+- Pilih durasi sewa
+- Konfirmasi harga + biaya tambahan
+- Kirim permohonan ke pemilik
+- Status: menunggu konfirmasi, disetujui, ditolak
 
----
+### 10. Pembayaran
+- Pilih metode bayar (transfer, GoPay, QRIS, kartu)
+- Detail tagihan: biaya sewa + deposit + biaya layanan
+- Invoice & bukti bayar
+- Riwayat pembayaran
 
-# 4. Nilai Jual Utama
+### 11. Survei Kos
+- Jadwalkan kunjungan langsung ke properti
+- Pilih tanggal & jam
+- Notifikasi reminder (H-1, 2 jam sebelum, saat tiba)
 
-> Kelola kos tanpa Excel, buku catatan, dan chat yang berantakan.
+### 12. Daftar Tunggu (Waitlist)
+- Daftar antre jika kamar penuh
+- Notifikasi saat kamar tersedia
 
-Pemilik kos dapat mengetahui kondisi bisnisnya dalam kurang dari 30 detik setelah membuka dashboard.
+### 13. Favorit / Wishlist
+- Simpan properti incaran
+- Cepat akses dari daftar favorit
 
----
+### 14. Riwayat Sewa
+- Status booking (pending, aktif, selesai, dibatalkan)
+- Detail sewa aktif, histori sewa sebelumnya
+- Tombol: perpanjang, bayar tagihan
 
-# 5. Modul Produk
+### 15. Program Poin / Loyalitas
+- Lihat total poin
+- Riwayat transaksi poin
+- Tukar poin (potongan harga, voucher)
+- Level / tier membership
 
-## Dashboard
+### 16. Promo & Voucher
+- Daftar promo aktif (diskon musiman, promo khusus)
+- Masukkan kode voucher
+- Syarat & ketentuan
 
-Menampilkan:
+### 17. Review & Rating
+- Tulis ulasan setelah sewa selesai
+- Rating bintang + komentar
+- Lihat ulasan dari penyewa lain
 
-* Total kamar
-* Kamar terisi
-* Kamar kosong
-* Penghuni aktif
-* Pendapatan bulan ini
-* Piutang aktif
-* Tagihan jatuh tempo
-* Tingkat okupansi
-* Maintenance aktif
+### 18. Akun & Pengaturan (Penyewa)
+- Edit profil (nama, foto, no HP, email)
+- Verifikasi akun & identitas
+- Ubah password
+- Pengaturan notifikasi
+- Hapus akun
 
----
-
-## Properti dan Multi Properti
-
-Mendukung:
-
-* Kos A
-* Kos B
-* Kos C
-
-Semua properti dapat dikelola dari satu dashboard.
-
----
-
-## Manajemen Kamar
-
-Data:
-
-* Nomor kamar
-* Lantai
-* Harga sewa
-* Fasilitas
-* Foto kamar
-* Catatan tambahan
-
-Status:
-
-* Kosong
-* Terisi
-* Booking
-* Maintenance
-* Renovasi
-
----
-
-## Manajemen Penghuni
-
-Data:
-
-* Nama
-* Nomor telepon
-* Nomor identitas
-* Nomor kendaraan
-* Kontak darurat
-* Foto identitas
-* Tanggal masuk
-* Tanggal keluar
+### 19. Laporkan Pengguna
+- Laporan pemilik kos/iklan mencurigakan
+- Kategori: penipuan, spam, tidak sesuai
 
 ---
 
-## Tagihan Otomatis
+## Sisi Pemilik Kos (Owner)
 
-Mendukung:
+### 20. Dashboard Owner
+- Ringkasan: total properti, kamar tersewa/kosong, pendapatan bulanan
+- Grafik performa: jumlah tampilan, chat masuk, booking
+- Insight: rata-rata harga sekitar, permintaan pasar
+- Promo & notifikasi penting
 
-* Bulanan
-* Mingguan
-* Tahunan
+### 21. Daftarkan Properti
+- Form pendaftaran kos/apartemen baru
+- Input: nama properti, tipe, alamat + peta, fasilitas, aturan, foto, harga
+- Proses verifikasi oleh admin
 
-Komponen tagihan:
+### 22. Edit Properti
+- Edit informasi properti yang sudah terdaftar
+- Tambah/hapus foto, sesuaikan VR tour
 
-* Sewa
-* Listrik
-* Air
-* Internet
-* Kebersihan
-* Parkir
-* Biaya tambahan
+### 23. Atur Ketersediaan Kamar
+- Buka/tutup kamar per kamar
+- Tandai kamar tersedia, penuh, atau renovasi
 
----
+### 24. Atur Harga Sewa
+- Set harga per kamar per durasi (bulanan/tahunan)
+- Atur minimal pembayaran di muka
+- Promo harga khusus / harga eksklusif
 
-## Pengingat Pembayaran Otomatis
+### 25. Kelola Booking
+- Lihat daftar permintaan booking
+- Terima / tolak permohonan
+- Status: pending, disetujui, ditolak, aktif, selesai
+- Riwayat booking
 
-Jadwal:
+### 26. Kontrak Sewa Digital
+- Buat & kirim kontrak sewa digital
+- Status tanda tangan digital
 
-* H-7
-* H-3
-* Hari H
-* H+3
-* H+7
+### 27. Data Penyewa
+- Lihat informasi penyewa aktif
+- Riwayat penghuni per kamar
+- Filter: aktif, pernah, blacklist
 
-Media:
+### 28. Kelola Tagihan
+- Generate tagihan sewa otomatis
+- Lihat status pembayaran (lunas/belum)
+- Kirim pengingat pembayaran
+- Riwayat pembayaran penyewa
 
-* WhatsApp
-* Email
-* SMS
+### 29. Laporan Keuangan
+- Pendapatan bersih per periode
+- Pengeluaran
+- Ringkasan per properti
 
----
+### 30. Statistik Iklan
+- Performa properti: views, chat masuk, booking
+- Perbandingkan dengan properti sekitar
 
-## Integrasi WhatsApp
+### 31. Langganan Premium
+- Pilih paket (1/3/6/12 bulan)
+- Benefit: prioritas listing, broadcast chat, kuota chat tak terbatas, cek properti sekitar, profil penyewa
+- Riwayat langganan
 
-Menggunakan QR Login Session.
+### 32. Iklan Prioritas
+- Beli paket iklan
+- Pasang iklan ke posisi atas
+- Laporan klik & impresi
 
-Fitur:
+### 33. Naikkan Peringkat
+- Naikkan peringkat di hasil pencarian
+- Pilih durasi (per pencarian / per waktu)
 
-* Pengingat pembayaran otomatis
-* Konfirmasi pembayaran
-* Pengumuman maintenance
-* Pengingat kontrak habis
-* Broadcast penghuni
+### 34. Broadcast Chat
+- Kirim 1 pesan ke banyak calon penyewa sekaligus
+- Fitur untuk pengguna premium
 
----
+### 35. Cek Properti Sekitar
+- Lihat harga & jumlah peminat properti sekitar
+- Riset kompetitor
 
-## Pembayaran
+### 36. Profil Penyewa
+- Lihat profil calon penyewa yang booking/chat (nama, rating, riwayat sewa)
+- Fitur untuk pengguna premium
 
-Status:
+### 37. Promo & Harga Eksklusif
+- Buat promo diskon untuk properti
+- Program harga eksklusif
+- Tampil di halaman utama / label khusus
 
-* Belum dibayar
-* Sebagian dibayar
-* Lunas
-* Menunggak
+### 38. Layanan Foto & Virtual Tour
+- Pesan layanan foto properti profesional
+- Pesan pembuatan Virtual Tour 360°
 
-Metode:
-
-* Transfer Bank
-* QRIS
-* Tunai
-* E-Wallet
-
----
-
-## Deposit Penghuni
-
-Fitur:
-
-* Deposit awal
-* Penggunaan deposit
-* Pengembalian deposit
-
----
-
-## Meter Listrik dan Air
-
-Input:
-
-* Meter sebelumnya
-* Meter terbaru
-
-Sistem menghitung penggunaan otomatis.
-
----
-
-## Riwayat Penghuni
-
-Menyimpan:
-
-* Riwayat pembayaran
-* Riwayat pelanggaran
-* Riwayat kerusakan
-* Riwayat kamar
-
----
-
-## Inventaris Kamar
-
-Contoh:
-
-* Kasur
-* Lemari
-* AC
-* TV
-* Meja
-* Kursi
+### 39. Pengaturan Akun (Owner)
+- Edit profil & informasi bisnis
+- Verifikasi identitas & properti
+- Rekening penampungan (pencairan dana)
+- Ubah password
+- Pengaturan notifikasi
+- Penutupan akun
 
 ---
 
-## Keluhan dan Maintenance
-
-Keluhan:
-
-* Lampu rusak
-* Keran bocor
-* AC rusak
-* Internet bermasalah
-
-Status:
-
-* Menunggu
-* Diproses
-* Selesai
-
----
-
-## Booking Kamar
-
-Calon penghuni dapat:
-
-* melihat kamar kosong,
-* melakukan reservasi,
-* membayar booking fee.
-
----
-
-## Portal Penghuni
-
-Penghuni dapat:
-
-* melihat tagihan,
-* melihat riwayat pembayaran,
-* upload bukti pembayaran,
-* membuat tiket keluhan.
-
----
-
-## Kontrak Digital
-
-Fitur:
-
-* Upload kontrak
-* Tanda tangan digital
-* Reminder kontrak habis
-
----
-
-## Laporan dan Analitik
-
-Laporan:
-
-* Pendapatan bulanan
-* Pendapatan tahunan
-* Tingkat okupansi
-* Piutang aktif
-* Pendapatan per kamar
-* Pendapatan per properti
-
-Analitik:
-
-* Properti paling menguntungkan
-* Kamar paling menguntungkan
-* Tingkat keterlambatan pembayaran
-
----
-
-# 6. Prioritas Pengembangan
-
-## Versi 1 (MVP)
-
-* Dashboard
-* Properti
-* Kamar
-* Penghuni
-* Tagihan
-* Pembayaran
-* Reminder
-* Laporan
-
-## Versi 2
-
-* Deposit
-* Meter listrik
-* Meter air
-* Maintenance
-* Inventaris
-
-## Versi 3
-
-* Booking kamar
-* Portal penghuni
-* Pembayaran online
-* Multi properti
-
-## Versi 4
-
-* Kontrak digital
-* Analitik
-* Integrasi pihak ketiga
-
----
-
-# 7. Fitur yang Tidak Menjadi Prioritas
-
-* Marketplace pencarian kos
-* Chat internal
-* AI chatbot
-* Prediksi harga sewa AI
-* Sistem akuntansi lengkap
-
----
-
-# 8. Technology Stack
-
-## Frontend
-
-* Next.js App Router
-* TypeScript
-* Tailwind CSS
-* React Hook Form
-* Zod
-* TanStack Query
-* Zustand
-* TanStack Table
-* Recharts
-
-Tidak menggunakan UI framework seperti shadcn/ui.
-
-Menggunakan internal design system dan reusable component library milik sendiri.
-
----
-
-## Backend
-
-* Express.js
-* TypeScript
-* REST API Architecture
-
----
-
-## Database
-
-* PostgreSQL
-* Prisma ORM
-
----
-
-## Cache dan Queue
-
-* Redis
-* BullMQ
-
-Digunakan untuk:
-
-* Reminder WhatsApp
-* Email
-* Invoice generation
-* Reporting
-
----
-
-## Notification
-
-* Evolution API
-* SMTP Email
-
----
-
-## Storage
-
-* Cloudflare R2
-* S3 Compatible Storage
-
----
-
-## Monitoring
-
-* Sentry
-* Pino Logger
-
----
-
-## Deployment
-
-* Frontend menggunakan Vercel
-* Backend menggunakan Docker
-* Database menggunakan PostgreSQL Managed Service
-
----
-
-# 9. Arsitektur
-
-Menggunakan:
-
-## Modular Monolith Architecture
-
-Bukan microservice.
-
-Alasan:
-
-* lebih sederhana,
-* lebih murah,
-* lebih mudah dirawat solo founder,
-* masih mampu menangani ribuan pelanggan.
-
----
-
-## Module Backend
-
-* Auth
-* Property
-* Room
-* Tenant
-* Billing
-* Utility
-* Maintenance
-* Notification
-* Reporting
-
----
-
-# 10. Security Architecture
-
-## Authentication
-
-* JWT Access Token 15 menit
-* Refresh Token 30 hari
-* HttpOnly Cookie
-* Token Rotation
-
----
-
-## Password Security
-
-* Argon2id
-* Minimum 8 karakter
-* Huruf besar
-* Huruf kecil
-* Angka
-
----
-
-## Authorization
-
-RBAC:
-
-* Super Admin
-* Owner
-* Admin
-* Staff
-* Tenant
-
----
-
-## Multi Tenant Isolation
-
-Semua query wajib menggunakan owner_id.
-
-Tujuan:
-
-* mencegah kebocoran data antar pelanggan.
-
----
-
-## API Security
-
-* Helmet
-* CORS
-* Rate Limiting
-* Validation
-* API Versioning
-
----
-
-## Proteksi Serangan
-
-* CSRF Protection
-* XSS Protection
-* SQL Injection Protection
-* Brute Force Protection
-
----
-
-## File Upload Security
-
-Validasi:
-
-* MIME Type
-* Extension
-* Ukuran file
-
-Storage menggunakan private bucket.
-
----
-
-## WhatsApp Security
-
-* Session terenkripsi
-* Session dipisahkan per owner
-* Session dapat diputus dari dashboard
-
----
-
-## Secrets Management
-
-Semua secret menggunakan environment variable dan secret manager.
-
----
-
-# 11. Audit dan Compliance
-
-Audit log mencatat:
-
-* Login
-* Logout
-* Pembayaran
-* Penghapusan invoice
-* Perubahan harga
-* Perubahan role
-
----
-
-# 12. Backup Strategy
-
-* Daily Backup
-* Weekly Backup
-* Monthly Archive
-
-Restore test dilakukan minimal setiap bulan.
-
----
-
-# 13. Monitoring dan Observability
-
-Monitoring:
-
-* CPU
-* RAM
-* Database
-* Queue
-* Error Rate
-* Response Time
-
-Health endpoint:
-
-* /health
-* /ready
-* /live
-
----
-
-# 14. Performance Strategy
-
-## Database Index
-
-* owner_id
-* room_id
-* tenant_id
-* invoice_id
-* due_date
-* payment_status
-
-## Pagination
-
-Semua endpoint list wajib menggunakan pagination.
-
-## Caching
-
-Redis digunakan untuk:
-
-* Dashboard
-* Statistik
-* Session
-
-## Queue
-
-BullMQ digunakan untuk seluruh pekerjaan asynchronous.
-
----
-
-# 15. DevOps
-
-* Docker
-* GitHub Actions
-* CI/CD Pipeline
-* Environment Separation
-* Automated Deployment
-
-Environment:
-
-* Development
-* Staging
-* Production
-
----
-
-# 16. Code Quality
-
-* ESLint
-* Prettier
-* Husky
-* lint-staged
-* Conventional Commit
-
----
-
-# 17. Engineering Principles
-
-* SOLID
-* DRY
-* KISS
-* YAGNI
-* Clean Architecture
-* Repository Pattern
-* DTO Pattern
-* Dependency Injection
-* Feature Based Structure
-* Security by Default
-* Observability First
-
----
-
-# 18. Scalability Target
-
-## Phase 1
-
-* 100 owner
-* 5.000 penghuni
-
-Infrastructure:
-
-* 4 CPU
-* 8 GB RAM
-
----
-
-## Phase 2
-
-* 1.000 owner
-* 50.000 penghuni
-
-Memisahkan:
-
-* Database
-* Redis
-* Backend
-
----
-
-## Phase 3
-
-* 10.000 owner
-* 500.000 penghuni
-
-Mulai mempertimbangkan pemisahan:
-
-* Notification Service
-* Billing Service
-* Reporting Service
-
----
-
-# 19. Prinsip Produk
-
-Bangun sesederhana mungkin, tetapi jangan membangun sesuatu yang akan menyulitkan enam bulan dari sekarang.
+## Catatan
+- Setiap halaman utama memiliki navigasi yang jelas antar role (penyewa vs pemilik)
+- Desain responsif (mobile-first)
+- Fokus pada kemudahan transaksi dan komunikasi
